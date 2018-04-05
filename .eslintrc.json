@@ -1,0 +1,85 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:jest/recommended",
+    "plugin:promise/recommended",
+    "plugin:security/recommended",
+    "plugin:import/recommended",
+    "plugin:flowtype/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "jest",
+    "flowtype",
+    "optimize-regex",
+    "compat",
+    "jsdoc",
+    "promise"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalDecorators": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "object-curly-spacing": ["error", "always"],
+    "comma-dangle": ["error", "never"],
+    "compat/compat": "error",
+    "optimize-regex/optimize-regex": "error",
+    "jsdoc/check-param-names": 1,
+    "jsdoc/check-tag-names": 1,
+    "jsdoc/check-types": 1,
+    "jsdoc/newline-after-description": 1,
+    "jsdoc/require-description-complete-sentence": 1,
+    "jsdoc/require-example": 1,
+    "jsdoc/require-hyphen-before-param-description": 1,
+    "jsdoc/require-param": 1,
+    "jsdoc/require-param-description": 1,
+    "jsdoc/require-param-name": 1,
+    "jsdoc/require-param-type": 1,
+    "jsdoc/require-returns-description": 1,
+    "jsdoc/require-returns-type": 1,
+    "import/extensions": ["error", "always", {"ignorePackages": true}],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [ "src", "assets" ]
+      }
+    ],
+    "import/group-exports": 1,
+    "import/no-unassigned-import": 1,
+    "import/max-dependencies": ["error", {"max": 10}],
+    "import/newline-after-import": ["error", {"count": 2}],
+    "import/no-duplicates": 1,
+    "import/exports-last": 1,
+    "flowtype/no-types-missing-file-annotation": 0,
+    "flowtype/delimiter-dangle": 2,
+    "flowtype/no-weak-types": 2,
+    "flowtype/semi": 2,
+    "jsx-a11y/label-has-for": [2, {
+      "components": [ "Label" ],
+      "required": {
+        "every": [ "nesting", "id" ]
+      },
+      "allowChildren": true
+    }]
+  }
+}

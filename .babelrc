@@ -1,0 +1,27 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    ["@babel/preset-env", {
+      "shippedProposals": true
+    }],
+    "@babel/preset-flow"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "@babel/transform-runtime"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["@babel/preset-env", { "targets": { "node": "current" }}],
+        "@babel/preset-flow"
+      ],
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-class-properties"
+      ]
+    }
+  }
+}
